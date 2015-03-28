@@ -9,7 +9,13 @@ Node.JS wrapper for Factom API
 
 ## Usage
 
- var factomjs = require('factomjs')
+var factomjs = require('factomjs')({host: 'http://demo.factom.org', port: '8088'});
+
+var pubkey = 'wallet';
+
+factomjs.creditbalance(pubkey);
+factomjs.buycredit(pubkey, 100);
+factomjs.dblocksbyrange(4, 4);
 
 ## Tests
  
