@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/igorbarinov/factomjs/issues"
   },
-  "homepage": "https://github.com/igorbarinov/factomjs"
+  "homepage": "https://github.com/igorbarinov/factomjs",
+  "dependencies": {
+    "restler": "^3.2.2"
+  }
 }
