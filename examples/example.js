@@ -1,4 +1,4 @@
-var factomjs = require('../lib/factomjs')({host: 'http://demo.factom.org', port: '8088'});
+var factomjs = require('../lib/index.js')({host: 'http://demo.factom.org', port: '8088'});
 var pubkey = 'wallet';
 
 factomjs.creditbalance(pubkey);
