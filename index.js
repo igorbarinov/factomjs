@@ -26,6 +26,19 @@ module.exports = function (options) {
 			rest.get(BASE_URI + '/v1/buycredit', {to: to, value: value}).on('complete', function(data) {
 				console.log(data); // auto convert to object
 			});
+		},
+
+		submitentry: function (chainId, extIds, data) {
+			entry = {
+				"ChainID": chainId, 
+				"ExtIDs": extIds,
+				"Data": Buffer(data).toString('hex')
+			};
+
+			jsonData = {datatype: 'entry', format: 'json', entry: JSON.stringify(entry)};
+			rest.postJson(BASE_URI + '/v1/submitentry', jsonData).on('complete', function(data) {
+				console.log(data); // auto convert to object
+			});
 		}
 	}
 };
