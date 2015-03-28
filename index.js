@@ -10,8 +10,20 @@ module.exports = function (options) {
 			return 
 		},
 
-		creditbalance: function () {
-			rest.get(BASE_URI + '/v1/creditbalance?&pubkey=wallet').on('complete', function(data) {
+		creditbalance: function (pubkey) {
+			rest.get(BASE_URI + '/v1/creditbalance', {pubkey: pubkey}).on('complete', function(data) {
+				console.log(data); // auto convert to object
+			});
+		},
+
+		dblocksbyrange: function (start, end) {
+			rest.get(BASE_URI + '/v1/dblocksbyrange' + '/' + start + '/' + end).on('complete', function(data) {
+				console.log(data); // auto convert to object
+			});
+		},
+
+		buycredit: function (to, value) {
+			rest.get(BASE_URI + '/v1/buycredit', {to: to, value: value}).on('complete', function(data) {
 				console.log(data); // auto convert to object
 			});
 		}
