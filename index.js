@@ -1,13 +1,19 @@
 var rest = require('restler');
 
-module.exports = {
-	connect: function() {
-		return 
-	},
+module.exports = function (options) {
+	var HOST = options.host,
+		PORT = options.port,
+		BASE_URI = HOST + ":" + PORT;
 
-	creditbalance: function () {
-		rest.get('http://45.55.165.169:8088/v1/creditbalance?&pubkey=wallet').on('complete', function(data) {
-			console.log(data); // auto convert to object
-		});
+	return {
+		connect: function() {
+			return 
+		},
+
+		creditbalance: function () {
+			rest.get(BASE_URI + '/v1/creditbalance?&pubkey=wallet').on('complete', function(data) {
+				console.log(data); // auto convert to object
+			});
+		}
 	}
 };
