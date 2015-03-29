@@ -16,7 +16,7 @@ var pubkey = 'wallet';
 factomjs.creditbalance(pubkey);
 factomjs.buycredit(pubkey, 100);
 factomjs.dblocksbyrange(4, 4);
-factomjs.submitentry('f4f614fd9b59fe26827137937d401e2b82125c4eb48f966e6e8d30f187184cb0', 'tipamoykluch', 'Another Hello from Moscow2!');
+factomjs.submitentry('f4f614fd9b59fe26827137937d401e2b82125c4eb48f966e6e8d30f187184cb0', '[tipamoykluch]', 'Hello from Moscow!');
 factomjs.entry('536f6d65206461746120746f207361766520696e20666163746f6d');
 
 ## Tests
